@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         
         backgroundColor: Colors.grey[100],
-        body: Text('Hello to Test',style: GoogleFonts.robotoCondensed(fontSize: 20,fontWeight: FontWeight.bold))
+        body: Text('Amine',style: GoogleFonts.robotoCondensed(fontSize: 20,fontWeight: FontWeight.bold))
       ),
     );
   }
