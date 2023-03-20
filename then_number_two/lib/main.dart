@@ -53,6 +53,11 @@ class _RootPageState extends State<RootPage> {
         foregroundColor: Colors.black,
         child: const Icon(Icons.add),
       ),
+      // floatingActionButton: Row(
+      //   children: [
+      //     FloatingActionButton(onPressed: () => ref.read(counter)),
+      //   ],
+      // ),
       bottomNavigationBar: BottomAppBar(
         notchMargin: 5.0,
         shape: const CircularNotchedRectangle(),
