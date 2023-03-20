@@ -37,7 +37,7 @@ Future SignIn() async{
                       //Image
                       Image.asset(
                         'images/garbage-truck.png',
-                          height:150
+                         height:150
                         ),
                         SizedBox(height: 20),
                   //title

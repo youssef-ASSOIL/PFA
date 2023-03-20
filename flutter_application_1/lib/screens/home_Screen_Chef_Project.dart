@@ -13,9 +13,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Center(
       
       child: Scaffold(
-        
-        backgroundColor: Colors.grey[100],
-        body: Text('Amine',style: GoogleFonts.robotoCondensed(fontSize: 20,fontWeight: FontWeight.bold))
+        backgroundColor: Colors.green[100],
+        body: Text('Zaid !!',style: GoogleFonts.robotoCondensed(fontSize: 20,fontWeight: FontWeight.bold))
       ),
     );
   }
