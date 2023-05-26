@@ -29,8 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color.fromARGB(255, 16, 231, 213),
-                      Color(0xFF3c6e71),
+                      Color.fromARGB(255
+                      , 16, 231, 213),
+                      Color(0xff000000),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -152,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 50,
             width: 50,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 11),
           Text(
             title,
             style: GoogleFonts.poppins(
