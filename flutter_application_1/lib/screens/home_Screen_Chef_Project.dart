@@ -10,7 +10,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
- @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -18,7 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color.fromARGB(255, 86, 162, 156), Color.fromARGB(255, 156, 237, 187)],
+            colors: [
+              Color(0xFFCED4DA),
+              Color(0xFFCED4DA),
+            ],
           ),
         ),
         child: Column(
@@ -29,9 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color.fromARGB(255
-                      , 16, 231, 213),
-                      Color(0xff000000),
+                      Color(0xFF495057),
+                      Color(0xFFCED4DA),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -76,19 +77,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text(
+                      "I am a",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.robotoCondensed(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Expanded(
-                          child: _buildClientCard('images/client.png', 'Clients'),
+                          child: _buildClientCard('./images/social-media.gif', 'Client'),
                         ),
                         SizedBox(width: 16),
                         Expanded(
-                          child: _buildClientCard('images/business.png', 'Employee'),
+                          child: _buildClientCard('./images/social-care.gif', 'Employee'),
                         ),
                         SizedBox(width: 16),
                         Expanded(
-                          child: _buildClientCard('images/manager.png', 'Managers'),
+                          child: _buildClientCard('./images/pakistani.gif', 'Manager'),
                         ),
                       ],
                     ),
@@ -107,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: Icon(Icons.help),
                       label: Text('Help !!!'),
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF019267),
+                        primary: Color(0xFFCED4DA),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -130,8 +140,8 @@ class _HomeScreenState extends State<HomeScreen> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xFF019267),
-            Color(0xFF017A58),
+            Colors.white,
+            Colors.white,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -141,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BoxShadow(
             offset: Offset(0, 10),
             blurRadius: 22,
-            color: Color(0xFF227C70).withOpacity(0.5),
+            color: Color(0xFF2E94B9).withOpacity(0.5),
           ),
         ],
       ),
@@ -159,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: GoogleFonts.poppins(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ],
