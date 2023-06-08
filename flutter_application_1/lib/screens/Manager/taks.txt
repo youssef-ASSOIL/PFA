@@ -1,0 +1,6 @@
+manager can add employees remove them or modify them 
+manager can add a company to implement the services
+manager can add the service remove or modify
+manager can add employee to implement the service
+
+ 

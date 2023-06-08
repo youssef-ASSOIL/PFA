@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key});
+  const HomeScreen({super.key,});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
                       Color.fromARGB(255
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(left: 10),
                       child: Icon(
                         Icons.arrow_back_ios,
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(right: 10),
+                        padding: const EdgeInsets.only(right: 10),
                         child: Text(
                           'SafeDispose',
                           textAlign: TextAlign.center,
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -82,17 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         Expanded(
                           child: _buildClientCard('images/client.png', 'Clients'),
                         ),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         Expanded(
                           child: _buildClientCard('images/business.png', 'Employee'),
                         ),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         Expanded(
                           child: _buildClientCard('images/manager.png', 'Managers'),
                         ),
                       ],
                     ),
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                     Text(
                       'Welcome to SafeDispose',
                       textAlign: TextAlign.center,
@@ -101,13 +101,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ElevatedButton.icon(
                       onPressed: () {},
-                      icon: Icon(Icons.help),
-                      label: Text('Help !!!'),
+                      icon: const Icon(Icons.help),
+                      label: const Text('Help !!!'),
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF019267),
+                        backgroundColor: const Color(0xFF019267),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: 150,
       width: 120,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [
             Color(0xFF019267),
             Color(0xFF017A58),
@@ -139,9 +139,9 @@ class _HomeScreenState extends State<HomeScreen> {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, 10),
+            offset: const Offset(0, 10),
             blurRadius: 22,
-            color: Color(0xFF227C70).withOpacity(0.5),
+            color: const Color(0xFF227C70).withOpacity(0.5),
           ),
         ],
       ),
@@ -153,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 50,
             width: 50,
           ),
-          SizedBox(height: 11),
+          const SizedBox(height: 11),
           Text(
             title,
             style: GoogleFonts.poppins(

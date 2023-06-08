@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "165153075419",
+    "project_id": "trash-tacker",
+    "storage_bucket": "trash-tacker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165153075419:android:34cb61c333bcbfdd009cfe",
+        "android_client_info": {
+          "package_name": "com.example.TrashTacker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165153075419-7b044t6i1qn15ngelphrno22ljlehfvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiAbgv0O47IJBtWQW29QAtJ9xh9vPdPxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165153075419-7b044t6i1qn15ngelphrno22ljlehfvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
