@@ -44,13 +44,13 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              './images/Save Dispose.png', // Replace with your own image asset
+              './images/SaveDispose.png', // Replace with your own image asset
               width: 400,
               height: 400,
             ),
             SizedBox(height: 16),
             Text(
-              'My App',
+              'Welcome',
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.black, // Set your desired text color

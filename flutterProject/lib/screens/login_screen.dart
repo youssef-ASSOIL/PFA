@@ -103,7 +103,7 @@ class _login_screenState extends State<login_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Color(0xFFCBE4DE),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -112,20 +112,18 @@ class _login_screenState extends State<login_screen> {
               children: [
                 //Image
                 Image.asset(
-                  'images/garbage-truck.png',
-                  height: 150,
+                  './images/camion.png',
+                  height: 250,
+                  width: 250,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 5),
                 //title
                 Text(
                   'Sign_In',
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 40, fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  "Welcome To You're app",
-                  style: GoogleFonts.robotoCondensed(fontSize: 20),
-                ),
+                
                 SizedBox(height: 20),
                 //email
                 Padding(
@@ -180,7 +178,7 @@ class _login_screenState extends State<login_screen> {
                     child: Container(
                       padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color: Colors.green[600],
+                        color: Color(0xFF0E8388),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -198,19 +196,7 @@ class _login_screenState extends State<login_screen> {
                 ),
                 SizedBox(height: 20),
                 //Text:sign up
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Sign_UP from here !',
-                        style: GoogleFonts.robotoCondensed(
-                            fontWeight: FontWeight.bold)),
-                    Text(
-                      'Sign_UP',
-                      style: GoogleFonts.robotoCondensed(
-                          color: Colors.cyan, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                )
+                
               ],
             ),
           ),

@@ -1,3 +1,6 @@
+
+
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pfa.classes/Intervention.dart';
 import 'package:mongo_dart/mongo_dart.dart';
 
@@ -53,7 +56,7 @@ Future<Map<String, dynamic>?> fetchCompteById(int id) async {
     }
 
 
-    Future<void> addIntervention(Intervention intervention) async {
+    Future<void> addIntervention(BuildContext context,Intervention intervention) async {
     final db = await Db.create(MONGO_CONN_URL);
     await db.open();
 
@@ -61,6 +64,35 @@ Future<Map<String, dynamic>?> fetchCompteById(int id) async {
     await collection.insert(intervention.toJson());
 
     db.close();
+    showDialog(
+  context: context,
+  builder: (BuildContext context) {
+    return AlertDialog(
+      title: Text('Intervention Added'),
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            './images/Testemail.gif', // Replace with the path to your email GIF
+            height: 50,
+            width: 50,
+          ),
+          SizedBox(height: 16),
+          Text('The intervention has been added to the collection.'),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: Text('OK'),
+        ),
+      ],
+    );
+  },
+);
 
     print('Intervention added to collection.');
   }

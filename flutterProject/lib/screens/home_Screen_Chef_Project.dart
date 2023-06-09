@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Manager/homes/home_screen_manager.dart';
+import 'package:flutter_application_1/screens/Help_page.dart';
 import 'package:flutter_application_1/screens/UserType.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -110,7 +111,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     SizedBox(height: 10),
                     ElevatedButton.icon(
-                      onPressed: yourCustomFunction,
+                      onPressed:(){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => helpPage(context)),
+                         );
+                      } ,
                       icon: Icon(Icons.help),
                       label: Text('Help !!!'),
                       style: ElevatedButton.styleFrom(
@@ -204,55 +210,8 @@ class _HomeScreenState extends State<HomeScreen> {
         context,
         MaterialPageRoute(builder: (context) => const Manager()),
       );
-    } else {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => helpPage(context)),
-      );
-    }
+    } 
+     
+    
   }
-}
-
-Widget helpPage(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('Help'),
-    ),
-    body: Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            'How can we assist you?',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              // Handle button press
-            },
-            child: Text('Contact Support'),
-          ),
-          SizedBox(height: 8),
-          ElevatedButton(
-            onPressed: () {
-              // Handle button press
-            },
-            child: Text('FAQs'),
-          ),
-          SizedBox(height: 8),
-          ElevatedButton(
-            onPressed: () {
-              // Handle button press
-            },
-            child: Text('Tutorials'),
-          ),
-        ],
-      ),
-    ),
-  );
 }

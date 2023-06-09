@@ -157,8 +157,8 @@ TextEditingController quantityController = TextEditingController();
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFFB8E6D7),
-              Color(0xFF397367),
+              Color(0xFFCBE4DE),
+              Color(0xFFCBE4DE),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -171,7 +171,7 @@ TextEditingController quantityController = TextEditingController();
               Container(
                 margin: EdgeInsets.only(bottom: 16),
                 child: Text(
-                  'Title info d\'intervention',
+                  'Intervention Information',
                   style: GoogleFonts.playfairDisplay(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -182,7 +182,7 @@ TextEditingController quantityController = TextEditingController();
               SizedBox(height: 16),
               Text(
                 'Type de déchet',
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.black),
               ),
               SizedBox(height: 8),
               Padding(
@@ -216,22 +216,22 @@ TextEditingController quantityController = TextEditingController();
               SizedBox(height: 16),
               Text(
                 'Quantity',
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.black),
               ),
               SizedBox(height: 8),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   controller: quantityController,
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: 'Enter the quantity',
-                    hintStyle: TextStyle(color: Colors.white70),
+                    hintStyle: TextStyle(color: Color(0xFF2E94B9)),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: Color(0xFF2E94B9)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: Color(0xFF2E94B9)),
                     ),
                   ),
                 ),
@@ -239,7 +239,7 @@ TextEditingController quantityController = TextEditingController();
               SizedBox(height: 16),
               Text(
                 'Date and Hour',
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(fontSize: 16, color: Colors.black),
               ),
               SizedBox(height: 8),
               InkWell(
@@ -247,12 +247,12 @@ TextEditingController quantityController = TextEditingController();
                 child: Container(
                   padding: EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white),
+                    border: Border.all(color: Color(0xFF2E94B9)),
                   ),
                   child: selectedDate != null && selectedTime != null
                       ? Text(
                           '${selectedDate!.toString().substring(0, 10)}',
-                          style: TextStyle(fontSize: 16, color: Colors.white),
+                          style: TextStyle(fontSize: 16, color: Color(0xFF2E94B9)),
                         )
                       : Text(
                           'Select Date and Hour',
@@ -282,7 +282,7 @@ TextEditingController quantityController = TextEditingController();
                   );
 
                   // Call the addIntervention method
-                  addIntervention(intervention);
+                  addIntervention(context,intervention);
                 } else {
                   // Handle the case when the quantity is empty
                   print('Quantity is empty. Please enter a valid value.');
@@ -375,16 +375,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.fromLTRB(16.0, 32.0, 16.0, 16.0),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFB8E6D7),
-              Color(0xFF397367),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        
+          
+            color: Color(0xFFCBE4DE),
+            
+           
+          
+        
         child: Column(
           children: [
             TableCalendar(
@@ -497,7 +494,7 @@ Widget build(BuildContext context) {
         buildNameTile('Type of Waste', client['Domaine'] ?? 'N/A'),
         SizedBox(height: 24.0),
         buildDescription(
-          'Certified Personal Trainer and Nutritionist with years of experience in creating effective diets and training plans focused on achieving individual customers goals in a smooth way.',
+          'Biocodex est un laboratoire pharmaceutique familial qui est passé de pionnier français du microbiote dans les années 50 à un acteur international aujourd’hui, en diversifiant ses produits et en élargissant son empreinte géographique.',
         ),
       ],
     );
@@ -556,8 +553,8 @@ class ProfileWidget extends StatelessWidget {
         alignment: Alignment.bottomRight,
         children: [
           CircleAvatar(
-            radius: 64.0,
-            backgroundImage: AssetImage('./images/user.png'),
+            radius: 60.0,
+            backgroundImage: AssetImage('./images/WhatsApp Image 2023-06-09 at 01.58.05.jpeg.jpg'),
           ),
           buildEditIcon(),
         ],
