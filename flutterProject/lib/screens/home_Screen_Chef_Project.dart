@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Manager/homes/home_screen_manager.dart';
 import 'package:flutter_application_1/screens/UserType.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color( 0xFFCBE4DE),
+                      Color(0xFFCBE4DE),
                       Color(0xFFCBE4DE),
                     ],
                     begin: Alignment.topLeft,
@@ -47,21 +48,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 child: Column(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    Expanded(
-      child: Padding(
-        padding: EdgeInsets.only(top:100),
-        child: Image.asset(
-          './images/Save Dispose.png', // Replace with the path to your image icon
-          width: 500,
-          height: 500,
-        ),
-      ),
-    ),
-    
-  ],
-),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 100),
+                        child: Image.asset(
+                          './images/Save Dispose.png', // Replace with the path to your image icon
+                          width: 500,
+                          height: 500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Expanded(
@@ -84,15 +84,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Expanded(
-                          child: _buildClientCard('./images/social-media.gif', 'Client'),
+                          child: _buildClientCard(
+                              './images/social-media.gif', 'Client'),
                         ),
                         SizedBox(width: 16),
                         Expanded(
-                          child: _buildClientCard('./images/social-care.gif', 'Employee'),
+                          child: _buildClientCard(
+                              './images/social-care.gif', 'Employee'),
                         ),
                         SizedBox(width: 16),
                         Expanded(
-                          child: _buildClientCard('./images/pakistani.gif', 'Manager'),
+                          child: _buildClientCard(
+                              './images/pakistani.gif', 'Manager'),
                         ),
                       ],
                     ),
@@ -184,20 +187,22 @@ class _HomeScreenState extends State<HomeScreen> {
     if (selectedRole == 'Client') {
       // Add your code for the 'Client' role
       Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => login_screen(userType:UserType.Client)),
+        context,
+        MaterialPageRoute(
+            builder: (context) => login_screen(userType: UserType.Client)),
       );
     } else if (selectedRole == 'Employee') {
       // Add your code for the 'Employee' role
       print('Employee role selected');
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => login_screen(userType:UserType.Employee)),
+        MaterialPageRoute(
+            builder: (context) => login_screen(userType: UserType.Employee)),
       );
     } else if (selectedRole == 'Manager') {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => login_screen(userType:UserType.Manager)),
+        MaterialPageRoute(builder: (context) => const Manager()),
       );
     } else {
       Navigator.push(
